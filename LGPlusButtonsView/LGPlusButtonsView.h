@@ -111,6 +111,7 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonAnimationType)
 @property (assign, nonatomic) LGPlusButtonsAppearingAnimationType buttonsAppearingAnimationType;
 @property (assign, nonatomic) LGPlusButtonAnimationType           plusButtonAnimationType;
 @property (strong, nonatomic) UIColor                             *coverColor;
+@property (assign, nonatomic) CGFloat                             rotationAngle;
 
 /** Default is 0.3 */
 @property (assign, nonatomic) IBInspectable NSTimeInterval appearingAnimationSpeed;
