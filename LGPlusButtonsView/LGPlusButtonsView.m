@@ -938,6 +938,11 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
     [self setNeedsLayout];
 }
 
+- (void)setRotationAngle:(CGFloat)rotationAngle
+{
+    _rotationAngle = rotationAngle;
+}
+
 #pragma mark -
 
 - (void)layoutSubviews
