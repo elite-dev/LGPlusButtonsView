@@ -227,6 +227,7 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
         self.hidden = !showAfterInit;
         _coverView.hidden = !(showAfterInit && !firstButtonIsPlusButton);
         _coverView.alpha = (showAfterInit && !firstButtonIsPlusButton ? 1.f : 0.f);
+        _rotationAngle = 45;
     }
     return self;
 }
@@ -1850,8 +1851,7 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
     else if (type == LGPlusButtonAnimationTypeRotate)
     {
         CGAffineTransform transform = CGAffineTransformIdentity;
-        transform = CGAffineTransformConcat(transform, CGAffineTransformMakeRotation(kLGPlusButtonsViewDegreesToRadians(45)));
-
+        transform = CGAffineTransformConcat(transform, CGAffineTransformMakeRotation(kLGPlusButtonsViewDegreesToRadians(_rotationAngle)));
         if (animated)
         {
             [UIView animateWithDuration:_buttonsAppearingAnimationSpeed
