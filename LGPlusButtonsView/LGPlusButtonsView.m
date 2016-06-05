@@ -834,11 +834,17 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 
 #pragma mark Description at index
 
+- (LGPlusButtonDescription *)getDescriptionAtIndex:(NSUInteger)index
+{
+    return (LGPlusButtonDescription *) _descriptionsArray[index];
+}
+
 - (void)setDescriptionAtIndex:(NSUInteger)index text:(NSString *)text
 {
     NSAssert(_descriptionsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
 
     [_descriptionsArray[index] setText:text];
+    [_descriptionsArray[index] sizeToFit];
 
     [self setNeedsLayout];
 }
