@@ -30,6 +30,7 @@
 #import <UIKit/UIKit.h>
 
 @class LGPlusButtonsView;
+@class LGPlusButtonDescription;
 
 static NSString *const kLGPlusButtonsViewWillShowNotification        = @"kLGPlusButtonsViewWillShowNotification";
 static NSString *const kLGPlusButtonsViewWillHideNotification        = @"kLGPlusButtonsViewWillHideNotification";
@@ -235,6 +236,7 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonAnimationType)
 
 #pragma mark - Description at index
 
+- (LGPlusButtonDescription *)getDescriptionAtIndex:(NSUInteger)index;
 - (void)setDescriptionAtIndex:(NSUInteger)index text:(NSString *)text;
 - (void)setDescriptionAtIndex:(NSUInteger)index textColor:(UIColor *)textColor;
 - (void)setDescriptionAtIndex:(NSUInteger)index backgroundColor:(UIColor *)backgroundColor;
